@@ -2,6 +2,7 @@ import "./App.css";
 import data from "./data/emojiList_mar8cs.json";
 import Search from "./components/Search";
 import Line from "./components/Line";
+import Footer from "./components/Footer";
 import { useState } from "react";
 
 function App() {
@@ -19,9 +20,7 @@ function App() {
             return <Line key={index} symbol={element2.symbol} title={element2.title} />;
           })}
       </div>
-
-      {/* <Footer /> */}
-      {/* Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a> */}
+      <Footer />
     </div>
   );
 }
