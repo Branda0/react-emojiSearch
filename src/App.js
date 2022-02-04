@@ -7,8 +7,6 @@ import { useState } from "react";
 
 function App() {
   const [search, setSearch] = useState("");
-  console.log(search);
-  console.log({ search });
   return (
     <div className="app-container">
       <Search setSearch={setSearch} />
@@ -16,8 +14,7 @@ function App() {
         {data
           .filter((element) => element.keywords.includes(search))
           .map((element2, index) => {
-            console.log(element2.title);
-            return <Line key={index} symbol={element2.symbol} title={element2.title} />;
+            return index < 20 && <Line key={index} symbol={element2.symbol} title={element2.title} />;
           })}
       </div>
       <Footer />
